@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<h1>All course</h1>
+
+
+<div class="grid grid-cols-3 gap-4 m-4">
+
+{% for course in courses  %}
+<div class="bg-slate-700 p-5 rounded">
+    <img class="rounded" src="{{course.image.url}}" alt="">
+    <h4 class="text-4xl font-bold">{{course.name}}</h4>
+</div>
+{% endfor %} 
+</div>
+
+{% endblock %}
+
